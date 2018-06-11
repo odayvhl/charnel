@@ -43,7 +43,7 @@ class PostmortemsController < ApplicationController
   
   private
     def postmortem_params
-      params.require(:postmortem).permit(:title, :tldr, :what_happened, :why_surprised)
+      params.require(:postmortem).permit(:title, :tldr, :what_happened, :why_surprised, :resolution)
     end
                                                                                
 end
