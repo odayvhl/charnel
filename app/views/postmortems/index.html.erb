@@ -1,0 +1,24 @@
+
+<h1>Listing postmortems</h1>
+
+<%= link_to 'Create New Postmortem', new_postmortem_path %>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>TLDR</th>
+    <th></th>
+  </tr>
+ 
+  <% @postmortems.each do |postmortem| %>
+    <tr>
+      <td><%= postmortem.title %></td>
+      <td><%= postmortem.tldr %></td>
+      <td><%= link_to 'Show', postmortem_path(postmortem) %></td>
+      <td><%= link_to 'Edit', edit_postmortem_path(postmortem) %></td>
+      <td><%= link_to 'Destroy', postmortem_path(postmortem),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>

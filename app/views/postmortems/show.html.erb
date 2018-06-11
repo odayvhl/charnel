@@ -1,0 +1,23 @@
+
+<p>
+  <strong>Title:</strong>
+  <%= @postmortem.title %>
+</p>
+ 
+<p>
+  <strong>TLDR:</strong>
+  <%= @postmortem.tldr %>
+</p>
+ 
+<p>
+  <strong>What Happend:</strong>
+  <%= @postmortem.what_happened %>
+</p>
+ 
+<p>
+  <strong>Why were we suprised?:</strong>
+  <%= @postmortem.why_surprised %>
+</p>
+
+<%= link_to 'Edit', edit_postmortem_path(@postmortem) %> |
+<%= link_to 'Back', postmortems_path %>

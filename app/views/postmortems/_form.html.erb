@@ -1,0 +1,41 @@
+<%= form_with(model: @postmortem, local: true) do |form| %>
+ 
+  <% if @postmortem.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@postmortem.errors.count, "error") %> prohibited
+        this postmortem from being saved:
+      </h2>
+      <ul>
+        <% @postmortem.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+  <p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= form.label :tldr %><br>
+    <%= form.text_area :tldr %>
+  </p>
+
+  <p>
+    <%= form.label :what_happened %><br>
+    <%= form.text_area :what_happened %>
+  </p>
+
+  <p>
+    <%= form.label :why_surprised %><br>
+    <%= form.text_area :why_surprised %>
+  </p>
+   
+  <p>
+    <%= form.submit %>
+  </p>
+ 
+<% end %>
