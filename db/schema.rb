@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_11_162314) do
+ActiveRecord::Schema.define(version: 2018_06_11_180031) do
 
   create_table "postmortems", force: :cascade do |t|
     t.string "title"
@@ -20,6 +20,15 @@ ActiveRecord::Schema.define(version: 2018_06_11_162314) do
     t.text "what_happend"
     t.text "what_happened"
     t.text "why_surprised"
+    t.datetime "start_time"
+    t.datetime "end_time"
+    t.datetime "detect_time"
+    t.integer "severity"
+    t.integer "problem_type"
+    t.string "subsystem"
+    t.string "incident_lead"
+    t.string "impact_type"
+    t.text "resolution"
   end
 
 end
